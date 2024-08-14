@@ -10,6 +10,7 @@ import './App.css';
 
 function App() {
   return (
+<<<<<<< HEAD
     <Router>
       <div className="App">
         <Navbar />
@@ -21,6 +22,14 @@ function App() {
             <Route path="/products" element={<ProductsPage />} />
           </Routes>
         </main>
+=======
+    <>
+      <div>
+       
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+>>>>>>> 6376b95b4eeaeecf95ed2282e4d9c412123f7b71
       </div>
     </Router>
   );

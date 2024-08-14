@@ -1,19 +1,18 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './Pages/NavBar';
-import HomePage from './Pages/Home';
-import FarmersPage from './Pages/Farmers';
-import BuyersPage from './Pages/Buyers';
-import ProductsPage from './Pages/Products';
+import NavBar from './components/NavBar';
+import HomePage from './components/HomePage';
+import FarmersPage from './components/FarmersPage';
+import BuyersPage from './components/BuyersPage';
+import ProductsPage from './components/ProductsPage';
 import './App.css';
 
 function App() {
   return (
-<<<<<<< HEAD
     <Router>
       <div className="App">
-        <Navbar />
+        <NavBar />
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -22,14 +21,6 @@ function App() {
             <Route path="/products" element={<ProductsPage />} />
           </Routes>
         </main>
-=======
-    <>
-      <div>
-       
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
->>>>>>> 6376b95b4eeaeecf95ed2282e4d9c412123f7b71
       </div>
     </Router>
   );

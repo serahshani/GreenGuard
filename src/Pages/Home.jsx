@@ -15,7 +15,7 @@ const Products = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    // Fetch products from the database and update state and local storage
+    
     fetchProducts();
   }, []);
 
@@ -40,7 +40,7 @@ const Products = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Post new product to the database
+    
     fetch('http://localhost:3000/products', {
       method: 'POST',
       headers: {
@@ -50,16 +50,16 @@ const Products = () => {
     })
     .then(response => response.json())
     .then(() => {
-      // Fetch updated products after adding a new one
+      
       fetchProducts();
-      toast.success('Product added successfully!'); // Show success notification
+      toast.success('Product added successfully!'); 
     })
     .catch(error => {
       console.error('Error adding product:', error);
-      toast.error('Failed to add product.'); // Show error notification
+      toast.error('Failed to add product.'); 
     });
 
-    // Reset form and close modal
+    
     setNewProduct({
       name: '',
       type: '',

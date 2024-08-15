@@ -20,7 +20,7 @@ const Products = () => {
   }, []);
 
   const fetchProducts = () => {
-    fetch('http://localhost:3000/products')
+    fetch('http://localhost:3001/products')
       .then(response => response.json())
       .then(data => {
         setProducts(data);
@@ -41,7 +41,8 @@ const Products = () => {
     e.preventDefault();
 
     
-    fetch('http://localhost:3000/products', {
+
+    fetch('http://localhost:3001/products', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -71,11 +72,8 @@ const Products = () => {
     setIsModalOpen(false);
   };
 
-  const sortedProducts = products.slice().sort((a, b) => {
-    if (a.category < b.category) return -1;
-    if (a.category > b.category) return 1;
-    return 0;
-  });
+  const fruits = products.filter(product => product.type.toLowerCase() === 'fruit');
+  const vegetables = products.filter(product => product.type.toLowerCase() === 'vegetable');
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -100,18 +98,17 @@ const Products = () => {
 
   const cardStyle = {
     backgroundColor: 'white',
-    border: '1px solid grey',
     borderRadius: '10px',
-    padding: '20px',
+    padding: '15px',
     margin: '10px',
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-    width: '200px',
+    width: '180px',
     textAlign: 'center'
   };
 
   const imgStyle = {
-    width: '100px',
-    height: '100px',
+    width: '80px',
+    height: '80px',
     objectFit: 'cover',
     borderRadius: '5px'
   };
@@ -156,20 +153,45 @@ const Products = () => {
   };
 
   const headerStyle = {
-    backgroundImage: 'url("https://media.istockphoto.com/id/1193489879/photo/counter-with-fresh-vegetables-and-a-sign-of-local-products.jpg?s=2048x2048&w=is&k=20&c=S2ZrZqmzx8G4sgiic3ljJFhcblLey_Wf3LJ_4kSLUUE=")', // Replace with your image URL
+    position: 'relative',
+    backgroundImage: 'url("https://media.istockphoto.com/id/1193489879/photo/counter-with-fresh-vegetables-and-a-sign-of-local-products.jpg?s=2048x2048&w=is&k=20&c=S2ZrZqmzx8G4sgiic3ljJFhcblLey_Wf3LJ_4kSLUUE=")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '300px',
     width: '100%',
-    marginBottom: '20px'
+    marginBottom: '20px',
+    color: 'white',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center'
+  };
+
+  const headerTextStyle = {
+    fontSize: '36px',
+    fontWeight: 'bold',
+    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)',
+    margin: '0',
+    padding: '0 20px'
+  };
+
+  const titleStyle = {
+    color: 'green',
+    textAlign: 'center', // Center the title
+    margin: '20px 0'
   };
 
   return (
     <div>
-      <header style={headerStyle}></header> {/* Header with image */}
+      <header style={headerStyle}>
+        <div style={headerTextStyle}>Harvest Fresh, Eat Fresh!</div>
+      </header> {/* Header with image and phrase */}
 
-      <h1 style={{ color: 'black' }}>Products</h1>
-      <button onClick={openModal} style={buttonStyle}>Add New Product</button>
+      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+        <button onClick={openModal} style={buttonStyle}>Add New Product</button>
+      </div>
+
+      <h1 style={titleStyle}>Products</h1> {/* Title color matched with button and centered */}
 
       {/* Modal */}
       {isModalOpen && (
@@ -237,17 +259,35 @@ const Products = () => {
         </div>
       )}
 
-      <div className="product-list" style={{ display: 'flex', flexWrap: 'wrap' }}>
-        {sortedProducts.map(product => (
-          <div key={product.id} className="product-card" style={cardStyle}>
-            <h2 style={{ color: 'green' }}>{product.name}</h2>
-            <p>Type: {product.type}</p>
-            <p>Price per Unit: ${product.price_per_unit}</p>
-            <p>Farmer ID: {product.farmer_id}</p>
-            <p>Description: {product.description}</p>
-            <img src={product.image_url} alt={product.name} style={imgStyle} />
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+        <div style={{ flex: 1 }}>
+          <h2 style={{ textAlign: 'center', color: 'green' }}>Fruits</h2>
+          <div className="product-list" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+            {fruits.map(product => (
+              <div key={product.id} className="product-card" style={cardStyle}>
+                <h3 style={{ color: 'green' }}>{product.name}</h3>
+                <p>Price per Unit: ${product.price_per_unit}</p>
+                <p>Farmer ID: {product.farmer_id}</p>
+                <p>Description: {product.description}</p>
+                <img src={product.image_url} alt={product.name} style={imgStyle} />
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+        <div style={{ flex: 1 }}>
+          <h2 style={{ textAlign: 'center', color: 'green' }}>Vegetables</h2>
+          <div className="product-list" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+            {vegetables.map(product => (
+              <div key={product.id} className="product-card" style={cardStyle}>
+                <h3 style={{ color: 'green' }}>{product.name}</h3>
+                <p>Price per Unit: ${product.price_per_unit}</p>
+                <p>Farmer ID: {product.farmer_id}</p>
+                <p>Description: {product.description}</p>
+                <img src={product.image_url} alt={product.name} style={imgStyle} />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       <ToastContainer /> {/* Container for toast notifications */}

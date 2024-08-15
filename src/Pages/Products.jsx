@@ -16,13 +16,11 @@ const Products = () => {
   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
-    
     fetch('http://localhost:3001/manures')
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.error('Error fetching data:', error));
   }, []);
-  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -228,11 +226,11 @@ const Products = () => {
           }}>
             <h2>{product.name}</h2>
             <p>Source: {product.source}</p>
-            <p>Nitrogen: {product.nutrients.nitrogen}%</p>
-            <p>Phosphorus: {product.nutrients.phosphorus}%</p>
-            <p>Potassium: {product.nutrients.potassium}%</p>
-            <p>Release Rate: {product.release_rate}</p>
-            <p>{product.description}</p>
+            <p>Nitrogen: {product.nutrients?.nitrogen || 'N/A'}%</p>
+            <p>Phosphorus: {product.nutrients?.phosphorus || 'N/A'}%</p>
+            <p>Potassium: {product.nutrients?.potassium || 'N/A'}%</p>
+            <p>Release Rate: {product.release_rate || 'N/A'}</p>
+            <p>{product.description || 'No description'}</p>
           </div>
         ))}
       </div>
@@ -240,4 +238,4 @@ const Products = () => {
   );
 };
 
-export default Products
+export default Products;

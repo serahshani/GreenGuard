@@ -193,7 +193,7 @@ const FarmersPage = () => {
     </div>
   );
 };
-
+export default FarmersPage;
 
 
 

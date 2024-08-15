@@ -16,13 +16,11 @@ const FarmersPage = () => {
   const { id } = useParams(); 
 
   useEffect(() => {
-<<<<<<< HEAD
-    fetch('http://localhost:3001/farmers')
-=======
+
     fetch('http://localhost:3000/farmers')
     fetch('http://localhost:3001/buyers')
 
->>>>>>> 40e72c4c59d3a5b2e2138cf7d682805c1e513ca0
+
       .then(response => response.json())
       .then(data => setFarmers(data))
       .catch(error => console.error('Error fetching farmers:', error));

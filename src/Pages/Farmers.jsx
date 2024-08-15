@@ -6,7 +6,7 @@ const Farmers = () => {
   const [farmers, setFarmers] = useState([]);
 
   useEffect(() => {
-    fetch('/db.json')
+    fetch('http://localhost:3001/buyers')
       .then(response => response.json())
       .then(data => setFarmers(data.farmers))
       .catch(error => console.error('Error fetching data:', error));

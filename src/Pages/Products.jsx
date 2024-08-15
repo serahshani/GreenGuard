@@ -6,7 +6,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('/db.json')
+    fetch('http://localhost:3000/buyers')
       .then(response => response.json())
       .then(data => setProducts(data.products))
       .catch(error => console.error('Error fetching data:', error));

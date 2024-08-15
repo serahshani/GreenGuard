@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import './FarmersPage.css'; 
 
-const FarmersPage = () => {
+const Farmers = () => {
   const [farmers, setFarmers] = useState([]);
   const [currentFarmer, setCurrentFarmer] = useState(null);
   const [formMode, setFormMode] = useState('add'); 
@@ -16,8 +16,10 @@ const FarmersPage = () => {
   const { id } = useParams(); 
 
   useEffect(() => {
-    fetch('http://localhost:3000/farmers')
-    fetch('http://localhost:3001/buyers')
+
+    fetch('http://localhost:3001/farmers')
+    fetch('http://localhost:3001/farmers')
+
 
       .then(response => response.json())
       .then(data => setFarmers(data))
@@ -26,7 +28,7 @@ const FarmersPage = () => {
 
   useEffect(() => {
     if (id) {
-      fetch(`http://localhost:3000/farmers/${id}`)
+      fetch(`http://localhost:3001/farmers${id}`)
         .then(response => response.json())
         .then(data => {
           setCurrentFarmer(data);
@@ -85,8 +87,8 @@ const FarmersPage = () => {
 
     const method = formMode === 'add' ? 'POST' : 'PUT';
     const url = formMode === 'add'
-      ? 'http://localhost:3000/farmers'
-      : `http://localhost:3000/farmers/${id}`;
+      ? 'http://localhost:3001/farmers'
+      : `http://localhost:3001/farmers${id}`;
 
     fetch(url, {
       method,
@@ -104,7 +106,7 @@ const FarmersPage = () => {
   };
 
   const handleDelete = (farmerId) => {
-    fetch(`http://localhost:3000/farmers/${farmerId}`, {
+    fetch(`http://localhost:3001/farmers${farmerId}`, {
       method: 'DELETE'
     })
       .then(() => {
@@ -191,7 +193,8 @@ const FarmersPage = () => {
     </div>
   );
 };
+export default FarmersPage;
 
 
 
-export default Farmers;
+

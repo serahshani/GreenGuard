@@ -1,148 +1,144 @@
 {
-    "farmers": [
-      {
-        "id": 1,
-        "name": "John Doe",
-        "contact": {
-          "phone": "+1234567890",
-          "email": "john.doe@example.com"
-        },
-        "farm": {
-          "name": "Green Acres Farm",
-          "location": "123 Country Road, Springfield, IL"
-        }
+  "farmers": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "contact": {
+        "phone": "+1234567890",
+        "email": "john.doe@example.com"
       },
-      {
-        "id": 2,
-        "name": "Jane Smith",
-        "contact": {
-          "phone": "+0987654321",
-          "email": "jane.smith@example.com"
-        },
-        "farm": {
-          "name": "Sunny Meadow Farm",
-          "location": "456 Farm Lane, Shelbyville, IL"
-        }
+      "farm": {
+        "name": "Green Acres Farm",
+        "location": "123 Country Road, Springfield, IL"
       }
-    ],
-    "buyers": [
-      {
-        "id": 1,
-        "name": "Alice Johnson",
-        "contact": {
-          "phone": "+1122334455",
-          "email": "alice.johnson@example.com"
-        },
-        "address": "789 City Center, Springfield, IL"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "contact": {
+        "phone": "+0987654321",
+        "email": "jane.smith@example.com"
       },
-      {
-        "id": 2,
-        "name": "Bob Williams",
-        "contact": {
-          "phone": "+5566778899",
-          "email": "bob.williams@example.com"
-        },
-        "address": "101 Business Park, Shelbyville, IL"
+      "farm": {
+        "name": "Sunny Meadow Farm",
+        "location": "456 Farm Lane, Shelbyville, IL"
       }
-    ],
-    "products": [
-      {
-        "id": 1,
-        "name": "Organic Apples",
-        "type": "Fruit",
-        "price_per_unit": 2.50,
-        "farmer_id": 1,
-        "image_url": "https://media.istockphoto.com/id/488152916/photo/organic-red-ripe-apples-on-the-orchard-tree-with-leaves.jpg?s=2048x2048&w=is&k=20&c=G6LEh-8e3LIhRNVEwOOzPNVYCu92TI_qyskromdjnUk="
-      },
-      {
-        "id": 2,
-        "name": "Free-Range Eggs",
-        "type": "Eggs",
-        "price_per_unit": 3.00,
-        "farmer_id": 2,
-        "image_url": "https://example.com/images/free-range-eggs.jpg"
-      },
-      {
-        "id": 3,
-        "name": "Fresh Carrots",
-        "type": "Vegetable",
-        "price_per_unit": 1.75,
-        "farmer_id": 1,
-        "image_url": "https://example.com/images/fresh-carrots.jpg"
-      },
-      {
-        "id": 4,
-        "name": "Heritage Tomatoes",
-        "type": "Vegetable",
-        "price_per_unit": 2.25,
-        "farmer_id": 2,
-        "image_url": "https://example.com/images/heritage-tomatoes.jpg"
-      }
-    ],
-    
-      "manures": [
-        {
-          "id": 1,
-          "name": "Alfalfa Meal",
-          "source": "Alfalfa Plant",
-          "nutrients": {
-            "nitrogen": 2.5,
-            "phosphorus": 1,
-            "potassium": 1.5
-          },
-          "release_rate": "Slow to Moderate",
-          "description": "Ground up alfalfa that composts faster in the soil. Best tilled in as an early spring additive."
-        },
-        {
-          "id": 2,
-          "name": "Cottonseed Meal",
-          "source": "Cotton Plant",
-          "nutrients": {
-            "nitrogen": 6,
-            "phosphorus": 2.5,
-            "potassium": 1.5
-          },
-          "release_rate": "Slow",
-          "description": "A by-product of cotton processing, rich in nitrogen and beneficial for acid-loving plants."
-        },
-        {
-          "id": 3,
-          "name": "Soybean Meal",
-          "source": "Soybean Plant",
-          "nutrients": {
-            "nitrogen": 7,
-            "phosphorus": 2,
-            "potassium": 1
-          },
-          "release_rate": "Moderate",
-          "description": "A high-nitrogen fertilizer that is a by-product of soybean oil production."
-        },
-        {
-          "id": 4,
-          "name": "Corn Gluten Meal",
-          "source": "Corn Plant",
-          "nutrients": {
-            "nitrogen": 9,
-            "phosphorus": 0,
-            "potassium": 0
-          },
-          "release_rate": "Immediate",
-          "description": "A by-product of corn processing, used as a pre-emergent weed control and nitrogen source."
-        },
-        {
-          "id": 5,
-          "name": "Seaweed",
-          "source": "Seaweed",
-          "nutrients": {
-            "nitrogen": 1,
-            "phosphorus": 0.5,
-            "potassium": 2.5
-          },
-          "release_rate": "Moderate",
-          "description": "Rich in trace elements and growth hormones, beneficial for overall plant health."
-        }
-      ]
     }
-    
-  
-  
+  ],
+  "buyers": [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "contact": {
+        "phone": "+1122334455",
+        "email": "alice.johnson@example.com"
+      },
+      "address": "789 City Center, Springfield, IL"
+    },
+    {
+      "id": 2,
+      "name": "Bob Williams",
+      "contact": {
+        "phone": "+5566778899",
+        "email": "bob.williams@example.com"
+      },
+      "address": "101 Business Park, Shelbyville, IL"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Organic Apples",
+      "type": "Fruit",
+      "price_per_unit": 2.50,
+      "farmer_id": 1,
+      "image_url": "https://media.istockphoto.com/id/488152916/photo/organic-red-ripe-apples-on-the-orchard-tree-with-leaves.jpg?s=2048x2048&w=is&k=20&c=G6LEh-8e3LIhRNVEwOOzPNVYCu92TI_qyskromdjnUk="
+    },
+    {
+      "id": 2,
+      "name": "Free-Range Eggs",
+      "type": "Eggs",
+      "price_per_unit": 3.00,
+      "farmer_id": 2,
+      "image_url": "https://unsplash.com/photos/close-up-photo-of-vegetable-salad--ftWfohtjNw"
+    },
+    {
+      "id": 3,
+      "name": "Fresh Carrots",
+      "type": "Vegetable",
+      "price_per_unit": 1.75,
+      "farmer_id": 1,
+      "image_url": "https://unsplash.com/photos/close-up-photo-of-vegetable-salad--ftWfohtjNw"
+    },
+    {
+      "id": 4,
+      "name": "Heritage Tomatoes",
+      "type": "Vegetable",
+      "price_per_unit": 2.25,
+      "farmer_id": 2,
+      "image_url": "https://example.com/images/heritage-tomatoes.jpg"
+    }
+  ],
+  "manures": [
+    {
+      "id": 1,
+      "name": "Alfalfa Meal",
+      "source": "Alfalfa Plant",
+      "nutrients": {
+        "nitrogen": 2.5,
+        "phosphorus": 1,
+        "potassium": 1.5
+      },
+      "release_rate": "Slow to Moderate",
+      "description": "Ground up alfalfa that composts faster in the soil. Best tilled in as an early spring additive."
+    },
+    {
+      "id": 2,
+      "name": "Cottonseed Meal",
+      "source": "Cotton Plant",
+      "nutrients": {
+        "nitrogen": 6,
+        "phosphorus": 2.5,
+        "potassium": 1.5
+      },
+      "release_rate": "Slow",
+      "description": "A by-product of cotton processing, rich in nitrogen and beneficial for acid-loving plants."
+    },
+    {
+      "id": 3,
+      "name": "Soybean Meal",
+      "source": "Soybean Plant",
+      "nutrients": {
+        "nitrogen": 7,
+        "phosphorus": 2,
+        "potassium": 1
+      },
+      "release_rate": "Moderate",
+      "description": "A high-nitrogen fertilizer that is a by-product of soybean oil production."
+    },
+    {
+      "id": 4,
+      "name": "Corn Gluten Meal",
+      "source": "Corn Plant",
+      "nutrients": {
+        "nitrogen": 9,
+        "phosphorus": 0,
+        "potassium": 0
+      },
+      "release_rate": "Immediate",
+      "description": "A by-product of corn processing, used as a pre-emergent weed control and nitrogen source."
+    },
+    {
+      "id": 5,
+      "name": "Seaweed",
+      "source": "Seaweed",
+      "nutrients": {
+        "nitrogen": 1,
+        "phosphorus": 0.5,
+        "potassium": 2.5
+      },
+      "release_rate": "Moderate",
+      "description": "Rich in trace elements and growth hormones, beneficial for overall plant health."
+    }
+  ]
+}

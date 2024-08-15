@@ -16,7 +16,7 @@ const Products = () => {
   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:3000/buyers')
+    
     fetch('http://localhost:3001/manures')
       .then(response => response.json())
       .then(data => setProducts(data))

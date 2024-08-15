@@ -1,3 +1,4 @@
+
 // src/components/Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -5,6 +6,7 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
   return (
     <nav className="navbar">
+      <div className="logo">GreeGuard</div>
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/farmers">Farmers</Link></li>

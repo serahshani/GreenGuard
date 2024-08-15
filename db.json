@@ -1,35 +1,58 @@
 {
-  "farmers": [
-    {
-      "id": "1",
-      "name": "John Doe",
-      "contact": {
-        "phone": "+1234567890",
-        "email": "john.doe@example.com"
+    "farmers": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "contact": {
+          "phone": "+1234567890",
+          "email": "john.doe@example.com"
+        },
+        "farm": {
+          "name": "Green Acres Farm",
+          "location": "123 Country Road, Springfield, IL"
+        }
       },
-      "farm": {
-        "name": "Green Acres Farm",
-        "location": "123 Country Road, Springfield, IL"
+      {
+        "id": 2,
+        "name": "Jane Smith",
+        "contact": {
+          "phone": "+0987654321",
+          "email": "jane.smith@example.com"
+        },
+        "farm": {
+          "name": "Sunny Meadow Farm",
+          "location": "456 Farm Lane, Shelbyville, IL"
+        }
       }
-    },
-    {
-      "id": "2",
-      "name": "Jane Smith",
-      "contact": {
-        "phone": "+0987654321",
-        "email": "jane.smith@example.com"
+    ],
+    "buyers": [
+      {
+        "id": 1,
+        "name": "Alice Johnson",
+        "contact": {
+          "phone": "+1122334455",
+          "email": "alice.johnson@example.com"
+        },
+        "address": "789 City Center, Springfield, IL"
       },
-      "farm": {
-        "name": "Sunny Meadow Farm",
-        "location": "456 Farm Lane, Shelbyville, IL"
+      {
+        "id": 2,
+        "name": "Bob Williams",
+        "contact": {
+          "phone": "+5566778899",
+          "email": "bob.williams@example.com"
+        },
+        "address": "101 Business Park, Shelbyville, IL"
       }
-    },
-    {
-      "id": "dbc0",
-      "name": "Abdul Makhtal",
-      "contact": {
-        "phone": "+3922943040",
-        "email": "abdallamakhtal@gmail.com"
+    ],
+    "products": [
+      {
+        "id": 1,
+        "name": "Organic Apples",
+        "type": "Fruit",
+        "price_per_unit": 2.50,
+        "farmer_id": 1,
+        "image_url": "https://media.istockphoto.com/id/488152916/photo/organic-red-ripe-apples-on-the-orchard-tree-with-leaves.jpg?s=2048x2048&w=is&k=20&c=G6LEh-8e3LIhRNVEwOOzPNVYCu92TI_qyskromdjnUk="
       },
       "farm": {
         "name": "Green Guard Farm",
@@ -56,6 +79,22 @@
       "contact": {
         "phone": "+5566778899",
         "email": "bob.williams@example.com"
+=======
+      {
+        "id": 2,
+        "name": "Free-Range Eggs",
+        "type": "Eggs",
+        "price_per_unit": 3.00,
+        "farmer_id": 2,
+        "image_url": "https://example.com/images/free-range-eggs.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Fresh Carrots",
+        "type": "Vegetable",
+        "price_per_unit": 1.75,
+        "farmer_id": 1,
+        "image_url": "https://example.com/images/fresh-carrots.jpg"
       },
       "address": "101 Business Park, Shelbyville, IL"
     },
@@ -138,8 +177,24 @@
       "image_url": "tt",
       "description": "they are sweet organic"
     }
+
   ],
   "manures": [
+
+  ]
+}
+    [  {
+
+        "id": 4,
+        "name": "Heritage Tomatoes",
+        "type": "Vegetable",
+        "price_per_unit": 2.25,
+        "farmer_id": 2,
+        "image_url": "https://example.com/images/heritage-tomatoes.jpg"
+      }
+    ],
+    
+      "manures": [
     {
       "id": 1,
       "name": "Alfalfa Meal",
@@ -235,7 +290,11 @@
       },
       "release_rate": "Moderate",
       "description": "Rich in organic matter, best composted before use to kill weed seeds.",
+
       "image_url": "https://example.com/images/soybean_meal.jpg"
+
+       "image_url": "https://example.com/images/soybean_meal.jpg"
+
     },
     {
       "id": 9,
@@ -419,3 +478,16 @@
     }
   ]
 }
+
+    }
+  ]
+
+
+
+
+    }
+
+    
+  
+  
+

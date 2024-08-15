@@ -41,6 +41,7 @@ const Products = () => {
     e.preventDefault();
 
     
+
     fetch('http://localhost:3001/products', {
       method: 'POST',
       headers: {

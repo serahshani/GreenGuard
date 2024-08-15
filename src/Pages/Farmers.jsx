@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import './FarmersPage.css'; 
 
-const FarmersPage = () => {
+const Farmers = () => {
   const [farmers, setFarmers] = useState([]);
   const [currentFarmer, setCurrentFarmer] = useState(null);
   const [formMode, setFormMode] = useState('add'); 
@@ -194,6 +194,7 @@ const FarmersPage = () => {
   );
 };
 export default FarmersPage;
+
 
 
 

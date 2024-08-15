@@ -1,3 +1,8 @@
+
+// src/components/FarmersPage.js
+// eslint-disable-next-line no-unused-vars
+// src/components/FarmersPage.js
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import './FarmersPage.css'; 
@@ -12,6 +17,8 @@ const FarmersPage = () => {
 
   useEffect(() => {
     fetch('http://localhost:3000/farmers')
+    fetch('http://localhost:3001/buyers')
+
       .then(response => response.json())
       .then(data => setFarmers(data))
       .catch(error => console.error('Error fetching farmers:', error));
@@ -186,3 +193,5 @@ const FarmersPage = () => {
 };
 
 export default FarmersPage;
+
+export default Farmers;

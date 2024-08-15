@@ -1,12 +1,30 @@
-<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /* src/App.css */
 .App {
-  font-family: Arial, sans-serif;
+  margin-top: 0%;
+  font-style: "Roboto", sans-serif;
+  background-color: rgb(233, 234, 236);
 }
 
 .navbar {
-  background-color: #333;
-  padding: 10px;
+  background-color: #28a745;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  margin: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-left: 20px;
 }
 
 .navbar ul {
@@ -14,6 +32,9 @@
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .navbar li {
@@ -24,34 +45,19 @@
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.5s;
 }
 
 .navbar a:hover {
-  text-decoration: underline;
+  color: #919b0b;
 }
 
 main {
-  padding: 20px;
+  padding: 0px;
+  margin: opx;
 }
-
-.product-list {
+.Home h1{
+  color: #28a745;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  align-items: center;
 }
-
-.product-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  width: 200px;
-  text-align: center;
-}
-
-.product-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-=======
->>>>>>> 6376b95b4eeaeecf95ed2282e4d9c412123f7b71

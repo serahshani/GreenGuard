@@ -1,51 +1,52 @@
 {
-    "farmers": [
-      {
-        "id": 1,
-        "name": "John Doe",
-        "contact": {
-          "phone": "+1234567890",
-          "email": "john.doe@example.com"
-        },
-        "farm": {
-          "name": "Green Acres Farm",
-          "location": "123 Country Road, Springfield, IL"
-        }
+  "farmers": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "contact": {
+        "phone": "+1234567890",
+        "email": "john.doe@example.com"
       },
-      {
-        "id": 2,
-        "name": "Jane Smith",
-        "contact": {
-          "phone": "+0987654321",
-          "email": "jane.smith@example.com"
-        },
-        "farm": {
-          "name": "Sunny Meadow Farm",
-          "location": "456 Farm Lane, Shelbyville, IL"
-        }
+      "farm": {
+        "name": "Green Acres Farm",
+        "location": "123 Country Road, Springfield, IL"
       }
-    ],
-    "buyers": [
-      {
-        "id": 1,
-        "name": "Alice Johnson",
-        "contact": {
-          "phone": "+1122334455",
-          "email": "alice.johnson@example.com"
-        },
-        "address": "789 City Center, Springfield, IL"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "contact": {
+        "phone": "+0987654321",
+        "email": "jane.smith@example.com"
       },
-      {
-        "id": 2,
-        "name": "Bob Williams",
-        "contact": {
-          "phone": "+5566778899",
-          "email": "bob.williams@example.com"
-        },
-        "address": "101 Business Park, Shelbyville, IL"
+      "farm": {
+        "name": "Sunny Meadow Farm",
+        "location": "456 Farm Lane, Shelbyville, IL"
       }
-    ],
-    "products": [
+    }
+  ],
+  "buyers": [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "contact": {
+        "phone": "+1122334455",
+        "email": "alice.johnson@example.com"
+      },
+      "address": "789 City Center, Springfield, IL"
+    },
+    {
+      "id": 2,
+      "name": "Bob Williams",
+      "contact": {
+        "phone": "+5566778899",
+        "email": "bob.williams@example.com"
+      },
+      "address": "101 Business Park, Shelbyville, IL"
+    }
+  ],
+  "products": 
+    [
       {
         "id": 1,
         "name": "Organic Apples",
@@ -57,72 +58,77 @@
       {
         "id": 2,
         "name": "Free-Range Eggs",
-        "type": "Eggs",
-        "price_per_unit": 3.00,
+        "type": "Dairy",
+        "price_per_unit": 3.75,
         "farmer_id": 2,
-        "image_url": "https://example.com/images/free-range-eggs.jpg"
+        "image_url": "https://media.istockphoto.com/id/682876180/photo/carton-of-fresh-brown-eggs.jpg?s=2048x2048&w=is&k=20&c=rqD-YF8_z4oSTqKX-ZQ9d_S2TbZRib11z1DIDGv9jdc="
       },
       {
         "id": 3,
-        "name": "Fresh Carrots",
-        "type": "Vegetable",
-        "price_per_unit": 1.75,
-        "farmer_id": 1,
-        "image_url": "https://example.com/images/fresh-carrots.jpg"
+        "name": "Raw Honey",
+        "type": "Condiment",
+        "price_per_unit": 6.00,
+        "farmer_id": 3,
+        "image_url": "https://media.istockphoto.com/id/1064135944/photo/jar-of-raw-honey-with-honey-dipper.jpg?s=2048x2048&w=is&k=20&c=KnIYv-Iv2t26mf67XX_6cT7COu_GmjkPPYb2WivYH5s="
       },
-<<<<<<< HEAD
-      "address": "101 Business Park, Shelbyville, IL"
-    }
-  ],
-  "products": [
-    {
-      "id": "1",
-      "name": "Organic Apples",
-      "type": "Fruit",
-      "price_per_unit": 2.5,
-      "farmer_id": 1,
-      "image_url": "https://media.istockphoto.com/id/488152916/photo/organic-red-ripe-apples-on-the-orchard-tree-with-leaves.jpg?s=2048x2048&w=is&k=20&c=G6LEh-8e3LIhRNVEwOOzPNVYCu92TI_qyskromdjnUk="
-    },
-    {
-      "id": "2",
-      "name": "Free-Range Eggs",
-      "type": "Eggs",
-      "price_per_unit": 3,
-      "farmer_id": 2,
-      "image_url": "https://example.com/images/free-range-eggs.jpg"
-    },
-    {
-      "id": "3",
-      "name": "Fresh Carrots",
-      "type": "Vegetable",
-      "price_per_unit": 1.75,
-      "farmer_id": 1,
-      "image_url": "https://example.com/images/fresh-carrots.jpg"
-    },
-    {
-      "id": "4",
-      "name": "Heritage Tomatoes",
-      "type": "Vegetable",
-      "price_per_unit": 2.25,
-      "farmer_id": 2,
-      "image_url": "https://example.com/images/heritage-tomatoes.jpg"
-    }
-  ]
-}
-    [  {
-=======
       {
->>>>>>> b2702d59cbe6f718ed4836e54efa2370c7bba0a4
         "id": 4,
+        "name": "Fresh Kale",
+        "type": "Vegetable",
+        "price_per_unit": 1.80,
+        "farmer_id": 4,
+        "image_url": "https://media.istockphoto.com/id/589063764/photo/bunch-of-fresh-organic-kale.jpg?s=2048x2048&w=is&k=20&c=UviCltW1kkwKcfpdAof0OjVgUNNQa6L77dYl38KiC8Y="
+      },
+      {
+        "id": 5,
         "name": "Heritage Tomatoes",
         "type": "Vegetable",
-        "price_per_unit": 2.25,
-        "farmer_id": 2,
-        "image_url": "https://example.com/images/heritage-tomatoes.jpg"
+        "price_per_unit": 4.20,
+        "farmer_id": 5,
+        "image_url": "https://media.istockphoto.com/id/475693676/photo/colorful-heirloom-tomatoes.jpg?s=2048x2048&w=is&k=20&c=JTKBNgLCpH7syMdfPHE8DMC5clD6BYcOXnNH5Pz5S8Q="
+      },
+      {
+        "id": 6,
+        "name": "Blueberries",
+        "type": "Fruit",
+        "price_per_unit": 5.50,
+        "farmer_id": 6,
+        "image_url": "https://media.istockphoto.com/id/1154256665/photo/blueberry.jpg?s=2048x2048&w=is&k=20&c=JaFZRb8pj_Vohcc5MnFo0BxA-d-FCkBLfTTB1RHRyOE="
+      },
+      {
+        "id": 7,
+        "name": "Almond Milk",
+        "type": "Beverage",
+        "price_per_unit": 3.20,
+        "farmer_id": 7,
+        "image_url": "https://media.istockphoto.com/id/1134445971/photo/glass-bottle-of-almond-milk-and-almonds-on-a-wooden-table.jpg?s=2048x2048&w=is&k=20&c=R7Feh7z_k6Xyx7iBLPCMLzX75SOYvUJwB_f-5P5Z0P4="
+      },
+      {
+        "id": 8,
+        "name": "Greek Yogurt",
+        "type": "Dairy",
+        "price_per_unit": 4.00,
+        "farmer_id": 8,
+        "image_url": "https://media.istockphoto.com/id/538851152/photo/homemade-greek-yogurt.jpg?s=2048x2048&w=is&k=20&c=O7vRBLFVUmnN5ewpZNa_qvRldpv5gR2F8PafZMEKT_s="
+      },
+      {
+        "id": 9,
+        "name": "Quinoa",
+        "type": "Grain",
+        "price_per_unit": 7.00,
+        "farmer_id": 9,
+        "image_url": "https://media.istockphoto.com/id/1134444439/photo/bowl-of-quinoa.jpg?s=2048x2048&w=is&k=20&c=naOUZDWvRuvEE4dxVWkbB5A8pftHkvBC_SUCJMRLQGk="
+      },
+      {
+        "id": 10,
+        "name": "Sweet Potatoes",
+        "type": "Vegetable",
+        "price_per_unit": 2.30,
+        "farmer_id": 10,
+        "image_url": "https://media.istockphoto.com/id/907030942/photo/sweet-potato.jpg?s=2048x2048&w=is&k=20&c=VDHjwd_SPUUpDi30S3vVCRHW1ymja_zrbic6kB3F0Uw="
       }
     ],
-    
-      "manures": [
+  "manures": [
     {
       "id": 1,
       "name": "Alfalfa Meal",
@@ -217,8 +223,7 @@
         "potassium": 0.6
       },
       "release_rate": "Moderate",
-      "description": "Rich in organic matter, best composted before use to kill weed seeds.",
-       "image_url": "https://example.com/images/soybean_meal.jpg"
+      "description": "Rich in organic matter, best composted before use to kill weed seeds."
     },
     {
       "id": 9,
@@ -365,12 +370,4 @@
       "description": "High in nitrogen, slow-release fertilizer."
     }
   ]
-<<<<<<< HEAD
-
-
-=======
-    }
->>>>>>> b2702d59cbe6f718ed4836e54efa2370c7bba0a4
-    
-  
-  
+}

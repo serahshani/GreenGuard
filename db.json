@@ -55,6 +55,32 @@
         "farmer_id": 1,
         "image_url": "https://media.istockphoto.com/id/488152916/photo/organic-red-ripe-apples-on-the-orchard-tree-with-leaves.jpg?s=2048x2048&w=is&k=20&c=G6LEh-8e3LIhRNVEwOOzPNVYCu92TI_qyskromdjnUk="
       },
+      "farm": {
+        "name": "Green Guard Farm",
+        "location": "584 Ngong Road,Nairobi,IL"
+      }
+    },
+    {
+      "id": "55c7",
+      "name": "steve",
+      "contact": {
+        "phone": "08789",
+        "email": "ovostine9250mutwiri@gmail.com"
+      },
+      "farm": {
+        "name": "steve",
+        "location": "fhj"
+      }
+    }
+  ],
+  "buyers": [
+    {
+      "id": "2",
+      "name": "Bob Williams",
+      "contact": {
+        "phone": "+5566778899",
+        "email": "bob.williams@example.com"
+=======
       {
         "id": 2,
         "name": "Free-Range Eggs",
@@ -71,7 +97,99 @@
         "farmer_id": 3,
         "image_url": "https://media.istockphoto.com/id/1064135944/photo/jar-of-raw-honey-with-honey-dipper.jpg?s=2048x2048&w=is&k=20&c=KnIYv-Iv2t26mf67XX_6cT7COu_GmjkPPYb2WivYH5s="
       },
+<<<<<<< HEAD
       {
+=======
+      "address": "101 Business Park, Shelbyville, IL"
+    },
+    {
+      "id": "c6bc",
+      "name": "steve",
+      "contact": {
+        "phone": "08789",
+        "email": "ovostine9250@gmail.com"
+      },
+      "lookingFor": "manure"
+    },
+    {
+      "id": "dac8",
+      "name": "Abdul",
+      "contact": {
+        "phone": "45665",
+        "email": "ovostine9250mutwiri@gmail.com"
+      },
+      "lookingFor": "cow"
+    },
+    {
+      "id": "4018",
+      "name": "Serah",
+      "contact": {
+        "phone": "08789",
+        "email": "ovostine9250mutwiri@gmail.com"
+      },
+      "lookingFor": "goat"
+    },
+    {
+      "id": "34fe",
+      "name": "Dennis",
+      "contact": {
+        "phone": "08789",
+        "email": "ovostine9250mutwiri@gmail.com"
+      },
+      "lookingFor": "beans"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Organic Apples",
+      "type": "Fruit",
+      "price_per_unit": 2.5,
+      "farmer_id": 1,
+      "image_url": "https://media.istockphoto.com/id/488152916/photo/organic-red-ripe-apples-on-the-orchard-tree-with-leaves.jpg?s=2048x2048&w=is&k=20&c=G6LEh-8e3LIhRNVEwOOzPNVYCu92TI_qyskromdjnUk="
+    },
+    {
+      "id": "2",
+      "name": "Free-Range Eggs",
+      "type": "Eggs",
+      "price_per_unit": 3,
+      "farmer_id": 2,
+      "image_url": "https://example.com/images/free-range-eggs.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Fresh Carrots",
+      "type": "Vegetable",
+      "price_per_unit": 1.75,
+      "farmer_id": 1,
+      "image_url": "https://example.com/images/fresh-carrots.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Heritage Tomatoes",
+      "type": "Vegetable",
+      "price_per_unit": 2.25,
+      "farmer_id": 2,
+      "image_url": "https://example.com/images/heritage-tomatoes.jpg"
+    },
+    {
+      "id": "add5",
+      "name": "black beries",
+      "type": "fruits",
+      "price_per_unit": "30",
+      "farmer_id": "5688765",
+      "image_url": "tt",
+      "description": "they are sweet organic"
+    }
+
+  ],
+  "manures": [
+
+  ]
+}
+    [  {
+
+>>>>>>> b57903122f4950eb3975092fe0c0c74f2717f31a
         "id": 4,
         "name": "Fresh Kale",
         "type": "Vegetable",
@@ -223,7 +341,16 @@
         "potassium": 0.6
       },
       "release_rate": "Moderate",
+<<<<<<< HEAD
       "description": "Rich in organic matter, best composted before use to kill weed seeds."
+=======
+      "description": "Rich in organic matter, best composted before use to kill weed seeds.",
+
+      "image_url": "https://example.com/images/soybean_meal.jpg"
+
+       "image_url": "https://example.com/images/soybean_meal.jpg"
+
+>>>>>>> b57903122f4950eb3975092fe0c0c74f2717f31a
     },
     {
       "id": 9,
@@ -368,6 +495,58 @@
       },
       "release_rate": "Slow",
       "description": "High in nitrogen, slow-release fertilizer."
+    },
+    {
+      "id": "1",
+      "name": "Alfalfa Meal",
+      "source": "Alfalfa Plant",
+      "nutrients": {
+        "nitrogen": 2.5,
+        "phosphorus": 1,
+        "potassium": 1.5
+      },
+      "release_rate": "Slow to Moderate",
+      "description": "Ground up alfalfa that composts faster in the soil. Best tilled in as an early spring additive."
+    },
+    {
+      "id": "1",
+      "name": "John Doe",
+      "contact": {
+        "phone": "+1234567890",
+        "email": "john.doe@example.com"
+      },
+      "farm": {
+        "name": "Green Acres Farm",
+        "location": "123 Country Road, Springfield, IL"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "contact": {
+        "phone": "+0987654321",
+        "email": "jane.smith@example.com"
+      },
+      "farm": {
+        "name": "Sunny Meadow Farm",
+        "location": "456 Farm Lane, Shelbyville, IL"
+      }
     }
   ]
 }
+<<<<<<< HEAD
+=======
+
+    }
+  ]
+
+
+
+
+    }
+
+    
+  
+  
+
+>>>>>>> b57903122f4950eb3975092fe0c0c74f2717f31a

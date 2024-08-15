@@ -1,26 +1,58 @@
-// src/components/BuyersPage.js
-// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
 
 const Buyers = () => {
   const [buyers, setBuyers] = useState([]);
+  const [farmers, setFarmers] = useState([]);
+  const [matches, setMatches] = useState([]);
 
   useEffect(() => {
-    fetch('/db.json')
+    // Fetch buyers data
+    fetch('/buyers.json')
       .then(response => response.json())
       .then(data => setBuyers(data.buyers))
-      .catch(error => console.error('Error fetching data:', error));
+      .catch(error => console.error('Error fetching buyers data:', error));
+
+    // Fetch farmers data
+    fetch('/farmers.json')
+      .then(response => response.json())
+      .then(data => setFarmers(data.farmers))
+      .catch(error => console.error('Error fetching farmers data:', error));
   }, []);
+
+  useEffect(() => {
+    if (buyers.length > 0 && farmers.length > 0) {
+      // Match surplus produce with demand
+      const matchedData = farmers.flatMap(farmer => 
+        farmer.produce.map(produce => {
+          const matchedBuyers = buyers.filter(buyer => 
+            buyer.demand.some(demand => demand.product === produce.product && demand.quantity <= produce.quantity)
+          );
+          return matchedBuyers.map(buyer => ({
+            farmer: farmer.name,
+            product: produce.product,
+            quantity: produce.quantity,
+            buyer: buyer.name,
+            buyerContact: buyer.contact,
+            buyerAddress: buyer.address
+          }));
+        })
+      ).flat();
+      setMatches(matchedData);
+    }
+  }, [buyers, farmers]);
 
   return (
     <div>
-      <h1>Buyers</h1>
+      <h1>Matched Buyers and Farmers</h1>
       <ul>
-        {buyers.map(buyer => (
-          <li key={buyer.id}>
-            <h2>{buyer.name}</h2>
-            <p>Contact: {buyer.contact.phone} | {buyer.contact.email}</p>
-            <p>Address: {buyer.address}</p>
+        {matches.map((match, index) => (
+          <li key={index}>
+            <h2>Farmer: {match.farmer}</h2>
+            <p>Product: {match.product}</p>
+            <p>Quantity: {match.quantity}</p>
+            <h3>Buyer: {match.buyer}</h3>
+            <p>Contact: {match.buyerContact.phone} | {match.buyerContact.email}</p>
+            <p>Address: {match.buyerAddress}</p>
           </li>
         ))}
       </ul>

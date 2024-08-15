@@ -81,67 +81,248 @@
     ],
     
       "manures": [
-        {
-          "id": 1,
-          "name": "Alfalfa Meal",
-          "source": "Alfalfa Plant",
-          "nutrients": {
-            "nitrogen": 2.5,
-            "phosphorus": 1,
-            "potassium": 1.5
-          },
-          "release_rate": "Slow to Moderate",
-          "description": "Ground up alfalfa that composts faster in the soil. Best tilled in as an early spring additive."
-        },
-        {
-          "id": 2,
-          "name": "Cottonseed Meal",
-          "source": "Cotton Plant",
-          "nutrients": {
-            "nitrogen": 6,
-            "phosphorus": 2.5,
-            "potassium": 1.5
-          },
-          "release_rate": "Slow",
-          "description": "A by-product of cotton processing, rich in nitrogen and beneficial for acid-loving plants."
-        },
-        {
-          "id": 3,
-          "name": "Soybean Meal",
-          "source": "Soybean Plant",
-          "nutrients": {
-            "nitrogen": 7,
-            "phosphorus": 2,
-            "potassium": 1
-          },
-          "release_rate": "Moderate",
-          "description": "A high-nitrogen fertilizer that is a by-product of soybean oil production."
-        },
-        {
-          "id": 4,
-          "name": "Corn Gluten Meal",
-          "source": "Corn Plant",
-          "nutrients": {
-            "nitrogen": 9,
-            "phosphorus": 0,
-            "potassium": 0
-          },
-          "release_rate": "Immediate",
-          "description": "A by-product of corn processing, used as a pre-emergent weed control and nitrogen source."
-        },
-        {
-          "id": 5,
-          "name": "Seaweed",
-          "source": "Seaweed",
-          "nutrients": {
-            "nitrogen": 1,
-            "phosphorus": 0.5,
-            "potassium": 2.5
-          },
-          "release_rate": "Moderate",
-          "description": "Rich in trace elements and growth hormones, beneficial for overall plant health."
-        }
-      ]
+    {
+      "id": 1,
+      "name": "Alfalfa Meal",
+      "source": "Alfalfa Plant",
+      "nutrients": {
+        "nitrogen": 2.5,
+        "phosphorus": 1,
+        "potassium": 1.5
+      },
+      "release_rate": "Slow to Moderate",
+      "description": "Ground up alfalfa that composts faster in the soil. Best tilled in as an early spring additive."
+    },
+    {
+      "id": 2,
+      "name": "Cottonseed Meal",
+      "source": "Cotton Plant",
+      "nutrients": {
+        "nitrogen": 6,
+        "phosphorus": 2.5,
+        "potassium": 1.5
+      },
+      "release_rate": "Slow",
+      "description": "A by-product of cotton processing, rich in nitrogen and beneficial for acid-loving plants."
+    },
+    {
+      "id": 3,
+      "name": "Soybean Meal",
+      "source": "Soybean Plant",
+      "nutrients": {
+        "nitrogen": 7,
+        "phosphorus": 2,
+        "potassium": 1
+      },
+      "release_rate": "Moderate",
+      "description": "A high-nitrogen fertilizer that is a by-product of soybean oil production."
+    },
+    {
+      "id": 4,
+      "name": "Corn Gluten Meal",
+      "source": "Corn Plant",
+      "nutrients": {
+        "nitrogen": 9,
+        "phosphorus": 0,
+        "potassium": 0
+      },
+      "release_rate": "Immediate",
+      "description": "A by-product of corn processing, used as a pre-emergent weed control and nitrogen source."
+    },
+    {
+      "id": 5,
+      "name": "Seaweed",
+      "source": "Seaweed",
+      "nutrients": {
+        "nitrogen": 1,
+        "phosphorus": 0.5,
+        "potassium": 2.5
+      },
+      "release_rate": "Moderate",
+      "description": "Rich in trace elements and growth hormones, beneficial for overall plant health."
+    },
+    {
+      "id": 6,
+      "name": "Chicken Manure",
+      "source": "Chicken",
+      "nutrients": {
+        "nitrogen": 1.1,
+        "phosphorus": 0.8,
+        "potassium": 0.5
+      },
+      "release_rate": "Fast",
+      "description": "High in nitrogen, great for leafy plants but should be composted before use to avoid burning plants."
+    },
+    {
+      "id": 7,
+      "name": "Cow Manure",
+      "source": "Cow",
+      "nutrients": {
+        "nitrogen": 0.5,
+        "phosphorus": 0.2,
+        "potassium": 0.5
+      },
+      "release_rate": "Slow",
+      "description": "Commonly used manure that improves soil structure and water retention."
+    },
+    {
+      "id": 8,
+      "name": "Horse Manure",
+      "source": "Horse",
+      "nutrients": {
+        "nitrogen": 0.7,
+        "phosphorus": 0.3,
+        "potassium": 0.6
+      },
+      "release_rate": "Moderate",
+      "description": "Rich in organic matter, best composted before use to kill weed seeds.",
+       "image_url": "https://example.com/images/soybean_meal.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Sheep Manure",
+      "source": "Sheep",
+      "nutrients": {
+        "nitrogen": 0.9,
+        "phosphorus": 0.5,
+        "potassium": 0.8
+      },
+      "release_rate": "Moderate",
+      "description": "Dry and pellet-like, easy to handle and rich in nutrients."
+    },
+    {
+      "id": 10,
+      "name": "Goat Manure",
+      "source": "Goat",
+      "nutrients": {
+        "nitrogen": 0.7,
+        "phosphorus": 0.3,
+        "potassium": 0.9
+      },
+      "release_rate": "Moderate",
+      "description": "Similar to sheep manure, dry and pellet-like, good for soil conditioning."
+    },
+    {
+      "id": 11,
+      "name": "Pig Manure",
+      "source": "Pig",
+      "nutrients": {
+        "nitrogen": 0.5,
+        "phosphorus": 0.3,
+        "potassium": 0.5
+      },
+      "release_rate": "Slow",
+      "description": "High in organic matter, should be composted to reduce pathogens."
+    },
+    {
+      "id": 12,
+      "name": "Rabbit Manure",
+      "source": "Rabbit",
+      "nutrients": {
+        "nitrogen": 2.4,
+        "phosphorus": 1.4,
+        "potassium": 0.6
+      },
+      "release_rate": "Fast",
+      "description": "High in nitrogen, can be used directly in the garden without composting."
+    },
+    {
+      "id": 13,
+      "name": "Bat Guano",
+      "source": "Bat",
+      "nutrients": {
+        "nitrogen": 10,
+        "phosphorus": 3,
+        "potassium": 1
+      },
+      "release_rate": "Fast",
+      "description": "Highly concentrated, excellent for flowering and fruiting plants."
+    },
+    {
+      "id": 14,
+      "name": "Fish Emulsion",
+      "source": "Fish",
+      "nutrients": {
+        "nitrogen": 5,
+        "phosphorus": 2,
+        "potassium": 2
+      },
+      "release_rate": "Fast",
+      "description": "Liquid fertilizer, great for quick nutrient boost."
+    },
+    {
+      "id": 15,
+      "name": "Worm Castings",
+      "source": "Worms",
+      "nutrients": {
+        "nitrogen": 1,
+        "phosphorus": 0.5,
+        "potassium": 1.5
+      },
+      "release_rate": "Moderate",
+      "description": "Rich in beneficial microbes, excellent for soil health."
+    },
+    {
+      "id": 16,
+      "name": "Green Manure",
+      "source": "Cover Crops",
+      "nutrients": {
+        "nitrogen": 2,
+        "phosphorus": 0.5,
+        "potassium": 2
+      },
+      "release_rate": "Moderate",
+      "description": "Cover crops like clover and rye, tilled into the soil to improve fertility."
+    },
+    {
+      "id": 17,
+      "name": "Compost",
+      "source": "Organic Waste",
+      "nutrients": {
+        "nitrogen": 1.5,
+        "phosphorus": 0.5,
+        "potassium": 1
+      },
+      "release_rate": "Slow",
+      "description": "Decomposed organic matter, improves soil structure and fertility."
+    },
+    {
+      "id": 18,
+      "name": "Blood Meal",
+      "source": "Animal Blood",
+      "nutrients": {
+        "nitrogen": 12,
+        "phosphorus": 0,
+        "potassium": 0
+      },
+      "release_rate": "Fast",
+      "description": "High in nitrogen, promotes rapid plant growth."
+    },
+    {
+      "id": 19,
+      "name": "Bone Meal",
+      "source": "Animal Bones",
+      "nutrients": {
+        "nitrogen": 4,
+        "phosphorus": 20,
+        "potassium": 0
+      },
+      "release_rate": "Slow",
+      "description": "Rich in phosphorus, great for root development."
+    },
+    {
+      "id": 20,
+      "name": "Feather Meal",
+      "source": "Poultry Feathers",
+      "nutrients": {
+        "nitrogen": 12,
+        "phosphorus": 0,
+        "potassium": 0
+      },
+      "release_rate": "Slow",
+      "description": "High in nitrogen, slow-release fertilizer."
+    }
+  ]
     }
     
   

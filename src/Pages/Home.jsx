@@ -20,7 +20,7 @@ const Products = () => {
   }, []);
 
   const fetchProducts = () => {
-    fetch('http://localhost:3000/products')
+    fetch('http://localhost:3001/products')
       .then(response => response.json())
       .then(data => {
         setProducts(data);
@@ -41,7 +41,8 @@ const Products = () => {
     e.preventDefault();
 
     
-    fetch('http://localhost:3000/products', {
+
+    fetch('http://localhost:3001/products', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

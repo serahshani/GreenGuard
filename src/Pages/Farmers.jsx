@@ -192,6 +192,6 @@ const FarmersPage = () => {
   );
 };
 
-export default FarmersPage;
+
 
 export default Farmers;

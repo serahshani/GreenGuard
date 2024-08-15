@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* src/App.css */
 .App {
@@ -58,81 +61,3 @@ main {
   margin: opx;
 }
 
-.product-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  color: #131512;
-  padding-left: 90px;
-}
-
-.product-card {
-  border: 1px solid #ddd;
-  border-radius: 11px;
-  padding: 16px;
-  width: 200px;
-  text-align: center;
-  
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: rgba(250, 250, 250, 0.6); /* Green tint with 80% opacity */
-  z-index: 1;
-}
-
-  
-
-
-.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-
-}
-h1 {
-  color: #067608;
-  padding-left: 500px;
-
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
-  background-color: #ffff;
-  width: 700px;
-  padding: 20px;
-  border-radius: 8px;
-  
-  backdrop-filter: blur(10px);
-
-}
-
-
-
-input, textarea {
-  padding: 8px;
-  border: 1px solid black;
-  border-radius: 6px;
-}
-
-button {
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  background-color: #28a745;
-  color: white;
-  cursor: pointer;
-  transition: 0.6s;
-  display: block;
-  margin: 20px auto; /* Centers the button horizontally */
-}
-
-button:hover {
-  background-color: #218838;
-}
-
-button:active {
-  background-color: #1e7e34; /* Darker green when clicked */
-}

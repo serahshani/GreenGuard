@@ -23,7 +23,7 @@ const BuyersPage = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch('http://localhost:3001/buyers')
+    fetch('http://localhost:3000/buyers')
       .then(response => response.json())
       .then(data => {
         setBuyers(data);
@@ -34,7 +34,7 @@ const BuyersPage = () => {
 
   useEffect(() => {
     if (id) {
-      fetch(`http://localhost:3001/buyers/${id}`)
+      fetch(`http://localhost:3000/buyers/${id}`)
         .then(response => response.json())
         .then(data => {
           setCurrentBuyer(data);
@@ -93,7 +93,7 @@ const BuyersPage = () => {
     const method = formMode === 'add' ? 'POST' : 'PUT';
     const url = formMode === 'add'
       ? 'http://localhost:3001/buyers'
-      : `http://localhost:3001/buyers/${currentBuyer.id}`;
+      : `http://localhost:3000/buyers/${currentBuyer.id}`;
 
     fetch(url, {
       method,
@@ -106,7 +106,7 @@ const BuyersPage = () => {
       .then(() => {
         setIsModalOpen(false);
         setDropdownOpen(null);
-        return fetch('http://localhost:3001/buyers');
+        return fetch('hhttp://localhost:3000/buyers');
       })
       .then(response => response.json())
       .then(data => {

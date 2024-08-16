@@ -16,7 +16,7 @@ const Products = () => {
   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:3001/manures')
+    fetch('http://localhost:3000/manures')
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.error('Error fetching data:', error));

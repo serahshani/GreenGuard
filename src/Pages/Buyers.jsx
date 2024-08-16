@@ -23,7 +23,7 @@ const BuyersPage = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch('http://localhost:3000/buyers')
+    fetch('https://phase-2-week-1-code-challenge-jm5z.vercel.app/buyers')
       .then(response => response.json())
       .then(data => {
         setBuyers(data);
@@ -34,7 +34,7 @@ const BuyersPage = () => {
 
   useEffect(() => {
     if (id) {
-      fetch(`http://localhost:3000/buyers/${id}`)
+      fetch(`https://phase-2-week-1-code-challenge-jm5z.vercel.app/buyers/${id}`)
         .then(response => response.json())
         .then(data => {
           setCurrentBuyer(data);
@@ -92,8 +92,8 @@ const BuyersPage = () => {
     e.preventDefault();
     const method = formMode === 'add' ? 'POST' : 'PUT';
     const url = formMode === 'add'
-      ? 'http://localhost:3001/buyers'
-      : `http://localhost:3000/buyers/${currentBuyer.id}`;
+      ? 'https://phase-2-week-1-code-challenge-jm5z.vercel.app/buyers'
+      : `https://phase-2-week-1-code-challenge-jm5z.vercel.app/buyers/${currentBuyer.id}`;
 
     fetch(url, {
       method,
@@ -120,7 +120,7 @@ const BuyersPage = () => {
 
   const handleDelete = () => {
     if (buyerToDelete) {
-      fetch(`http://localhost:3001/buyers/${buyerToDelete}`, {
+      fetch(`https://phase-2-week-1-code-challenge-jm5z.vercel.app/buyers/${buyerToDelete}`, {
         method: 'DELETE'
       })
         .then(() => {

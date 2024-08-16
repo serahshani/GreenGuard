@@ -20,7 +20,7 @@ const Products = () => {
   }, []);
 
   const fetchProducts = () => {
-    fetch('http://localhost:3000/products')
+    fetch('https://phase-2-week-1-code-challenge-jm5z.vercel.app/products')
       .then(response => response.json())
       .then(data => {
         setProducts(data);
@@ -40,7 +40,7 @@ const Products = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:3001/products', {
+    fetch('https://phase-2-week-1-code-challenge-jm5z.vercel.app/products', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

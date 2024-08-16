@@ -16,7 +16,7 @@ const Products = () => {
   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:3000/manures')
+    fetch('https://phase-2-week-1-code-challenge-jm5z.vercel.app/manures')
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.error('Error fetching data:', error));

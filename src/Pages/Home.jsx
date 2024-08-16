@@ -13,14 +13,14 @@ const Products = () => {
     description: ''
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   useEffect(() => {
-    
     fetchProducts();
   }, []);
 
   const fetchProducts = () => {
-    fetch('http://localhost:3001/products')
+    fetch('https://phase-2-week-1-code-challenge-jm5z.vercel.app/products')
       .then(response => response.json())
       .then(data => {
         setProducts(data);
@@ -40,27 +40,23 @@ const Products = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    
-
-    fetch('http://localhost:3001/products', {
+    fetch('https://phase-2-week-1-code-challenge-jm5z.vercel.app/products', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(newProduct)
     })
-    .then(response => response.json())
-    .then(() => {
-      
-      fetchProducts();
-      toast.success('Product added successfully!'); 
-    })
-    .catch(error => {
-      console.error('Error adding product:', error);
-      toast.error('Failed to add product.'); 
-    });
+      .then(response => response.json())
+      .then(() => {
+        fetchProducts();
+        toast.success('Product added successfully!');
+      })
+      .catch(error => {
+        console.error('Error adding product:', error);
+        toast.error('Failed to add product.');
+      });
 
-    
     setNewProduct({
       name: '',
       type: '',
@@ -72,11 +68,16 @@ const Products = () => {
     setIsModalOpen(false);
   };
 
-  const fruits = products.filter(product => product.type.toLowerCase() === 'fruit');
-  const vegetables = products.filter(product => product.type.toLowerCase() === 'vegetable');
-
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+
+  const filteredProducts = selectedCategory === 'All' 
+    ? products 
+    : products.filter(product => product.type.toLowerCase() === selectedCategory.toLowerCase());
 
   const inputStyle = {
     margin: '10px 0',
@@ -113,7 +114,6 @@ const Products = () => {
     borderRadius: '5px'
   };
 
-  // Modal styles
   const modalOverlayStyle = {
     position: 'fixed',
     top: 0,
@@ -177,8 +177,29 @@ const Products = () => {
 
   const titleStyle = {
     color: 'green',
-    textAlign: 'center', // Center the title
+    textAlign: 'center',
     margin: '20px 0'
+  };
+
+  const sidebarStyle = {
+    width: '200px',
+    padding: '20px',
+    backgroundColor: '#f4f4f4',
+    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+    borderRadius: '10px',
+    marginRight: '20px'
+  };
+
+  const categoryButtonStyle = {
+    backgroundColor: 'white',
+    color: 'green',
+    border: '1px solid green',
+    borderRadius: '5px',
+    padding: '10px 20px',
+    margin: '10px 0',
+    cursor: 'pointer',
+    textAlign: 'left',
+    width: '100%'
   };
 
   return (
@@ -187,103 +208,134 @@ const Products = () => {
         <div style={headerTextStyle}>Harvest Fresh, Eat Fresh!</div>
       </header> {/* Header with image and phrase */}
 
-      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-        <button onClick={openModal} style={buttonStyle}>Add New Product</button>
-      </div>
-
-      <h1 style={titleStyle}>Products</h1> {/* Title color matched with button and centered */}
-
-      {/* Modal */}
-      {isModalOpen && (
-        <div style={modalOverlayStyle}>
-          <div style={modalContentStyle}>
-            <button onClick={closeModal} style={closeButtonStyle}>X</button>
-            <h2>Add New Product</h2>
-            <form onSubmit={handleSubmit}>
-              <input
-                type="text"
-                name="name"
-                value={newProduct.name}
-                onChange={handleChange}
-                placeholder="Name"
-                required
-                style={inputStyle}
-              />
-              <input
-                type="text"
-                name="type"
-                value={newProduct.type}
-                onChange={handleChange}
-                placeholder="Type"
-                required
-                style={inputStyle}
-              />
-              <input
-                type="number"
-                name="price_per_unit"
-                value={newProduct.price_per_unit}
-                onChange={handleChange}
-                placeholder="Price per Unit"
-                required
-                style={inputStyle}
-              />
-              <input
-                type="text"
-                name="farmer_id"
-                value={newProduct.farmer_id}
-                onChange={handleChange}
-                placeholder="Farmer ID"
-                required
-                style={inputStyle}
-              />
-              <input
-                type="text"
-                name="image_url"
-                value={newProduct.image_url}
-                onChange={handleChange}
-                placeholder="Image URL"
-                required
-                style={inputStyle}
-              />
-              <textarea
-                name="description"
-                value={newProduct.description}
-                onChange={handleChange}
-                placeholder="Description"
-                required
-                style={{ ...inputStyle, height: '100px' }}
-              />
-              <button type="submit" style={buttonStyle}>Add Product</button>
-            </form>
-          </div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div style={sidebarStyle}>
+          <h2 style={{ color: 'green', textAlign: 'center' }}>Categories</h2>
+          <button 
+            onClick={() => handleCategoryClick('All')} 
+            style={categoryButtonStyle}
+          >
+            All
+          </button>
+          <button 
+            onClick={() => handleCategoryClick('Fruit')} 
+            style={categoryButtonStyle}
+          >
+            Fruits
+          </button>
+          <button 
+            onClick={() => handleCategoryClick('Vegetable')} 
+            style={categoryButtonStyle}
+          >
+            Vegetables
+          </button>
+          <button 
+            onClick={() => handleCategoryClick('Dairy')} 
+            style={categoryButtonStyle}
+          >
+            Dairy
+          </button>
+          <button 
+            onClick={() => handleCategoryClick('Condiment')} 
+            style={categoryButtonStyle}
+          >
+            Condiments
+          </button>
+          <button 
+            onClick={() => handleCategoryClick('Grain')} 
+            style={categoryButtonStyle}
+          >
+            Grains
+          </button>
+          <button 
+            onClick={() => handleCategoryClick('Beverage')} 
+            style={categoryButtonStyle}
+          >
+            Beverages
+          </button>
         </div>
-      )}
 
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
         <div style={{ flex: 1 }}>
-          <h2 style={{ textAlign: 'center', color: 'green' }}>Fruits</h2>
-          <div className="product-list" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-            {fruits.map(product => (
-              <div key={product.id} className="product-card" style={cardStyle}>
-                <h3 style={{ color: 'green' }}>{product.name}</h3>
-                <p>Price per Unit: ${product.price_per_unit}</p>
-                <p>Farmer ID: {product.farmer_id}</p>
-                <p>Description: {product.description}</p>
-                <img src={product.image_url} alt={product.name} style={imgStyle} />
+          <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+            <button onClick={openModal} style={buttonStyle}>Add New Product</button>
+          </div>
+
+          <h1 style={titleStyle}>Products</h1> {/* Title color matched with button and centered */}
+
+          {/* Modal */}
+          {isModalOpen && (
+            <div style={modalOverlayStyle}>
+              <div style={modalContentStyle}>
+                <button onClick={closeModal} style={closeButtonStyle}>X</button>
+                <h2>Add New Product</h2>
+                <form onSubmit={handleSubmit}>
+                  <input
+                    type="text"
+                    name="name"
+                    value={newProduct.name}
+                    onChange={handleChange}
+                    placeholder="Name"
+                    required
+                    style={inputStyle}
+                  />
+                  <input
+                    type="text"
+                    name="type"
+                    value={newProduct.type}
+                    onChange={handleChange}
+                    placeholder="Type"
+                    required
+                    style={inputStyle}
+                  />
+                  <input
+                    type="number"
+                    name="price_per_unit"
+                    value={newProduct.price_per_unit}
+                    onChange={handleChange}
+                    placeholder="Price per Unit"
+                    required
+                    style={inputStyle}
+                  />
+                  <input
+                    type="text"
+                    name="farmer_id"
+                    value={newProduct.farmer_id}
+                    onChange={handleChange}
+                    placeholder="Farmer ID"
+                    required
+                    style={inputStyle}
+                  />
+                  <input
+                    type="text"
+                    name="image_url"
+                    value={newProduct.image_url}
+                    onChange={handleChange}
+                    placeholder="Image URL"
+                    required
+                    style={inputStyle}
+                  />
+                  <textarea
+                    name="description"
+                    value={newProduct.description}
+                    onChange={handleChange}
+                    placeholder="Description"
+                    required
+                    style={{ ...inputStyle, height: '100px' }}
+                  />
+                  <button type="submit" style={buttonStyle}>Add Product</button>
+                </form>
               </div>
-            ))}
-          </div>
-        </div>
-        <div style={{ flex: 1 }}>
-          <h2 style={{ textAlign: 'center', color: 'green' }}>Vegetables</h2>
+            </div>
+          )}
+
           <div className="product-list" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-            {vegetables.map(product => (
-              <div key={product.id} className="product-card" style={cardStyle}>
-                <h3 style={{ color: 'green' }}>{product.name}</h3>
-                <p>Price per Unit: ${product.price_per_unit}</p>
-                <p>Farmer ID: {product.farmer_id}</p>
-                <p>Description: {product.description}</p>
-                <img src={product.image_url} alt={product.name} style={imgStyle} />
+            {filteredProducts.map(products => (
+              <div key={products.id} className="product-card" style={cardStyle}>
+                <h3 style={{ color: 'green' }}>{products.name}</h3>
+                <p>Price per Unit: ${products.price_per_unit}</p>
+                <p>Farmer ID: {products.farmer_id}</p>
+                <p>Description: {products.description}</p>
+                <img src={products.image_url} alt={products.name} style={imgStyle} />
               </div>
             ))}
           </div>
